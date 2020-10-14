@@ -19,7 +19,7 @@ function ProfilePageHeader() {
         style={{
           backgroundImage:
             "url(" +
-            require("../../assets/img/siteImages/sell_header_image.jpg") +
+            require("../../assets/siteImages/sell_header_image.jpg") +
             ")",
         }}
       >

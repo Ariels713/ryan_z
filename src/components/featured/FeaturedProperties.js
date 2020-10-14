@@ -41,7 +41,7 @@ function SectionCards() {
                     <img
                       alt="..."
                       className="img"
-                      src={require("../../assets/img/siteImages/house1.jpg")}
+                      src={require("../../assets/siteImages/house1.jpg")}
                     />
                   </a>
                 </div>
@@ -76,7 +76,7 @@ function SectionCards() {
                     <img
                       alt="..."
                       className="img"
-                      src={require("../../assets/img/siteImages/house1.jpg")}
+                      src={require("../../assets/siteImages/house1.jpg")}
                     />
                   </a>
                 </div>
@@ -111,7 +111,7 @@ function SectionCards() {
                     <img
                       alt="..."
                       className="img"
-                      src={require("../../assets/img/siteImages/house1.jpg")}
+                      src={require("../../assets/siteImages/house1.jpg")}
                     />
                   </a>
                 </div>

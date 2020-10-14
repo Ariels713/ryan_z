@@ -2,21 +2,8 @@
 import React from "react";
 
 // reactstrap components
-import { Container, UncontrolledCarousel } from "reactstrap";
+import { Container } from "reactstrap";
 // core comments
-
-const carouselItems = [
-  {
-    src: "../../assets/img/siteImages/main_header_image.jpg",
-    altText: "Slide 1",
-    caption: "",
-  },
-  {
-    src: "../../assets/img/siteImages/main_header_image1.jpg",
-    altText: "Slide 1",
-    caption: "",
-  },
-];
 
 function PresentationHeader() {
   return (
@@ -27,7 +14,7 @@ function PresentationHeader() {
           style={{
             backgroundImage:
               "url(" +
-              require("assets/img/siteImages/main_header_image.jpg") +
+              require("../../assets/siteImages/main_header_image.jpg") +
               ")",
           }}
         >

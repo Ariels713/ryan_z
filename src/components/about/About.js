@@ -21,7 +21,7 @@ function SectionHeader() {
               <div className="ipad-container">
                 <img
                   alt="..."
-                  src={require("../../assets/img/siteImages/headShot.jpg")}
+                  src={require("../../assets/siteImages/headShot.jpg")}
                 />
               </div>
             </Col>
