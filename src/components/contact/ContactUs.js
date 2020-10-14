@@ -9,7 +9,9 @@ import {
 // reactstrap components
 import { Button, Form, Input, Container, Row, Col } from "reactstrap";
 import ContactUsHeader from "./ContactUsHeader";
-// core components
+// Google Maps API Key
+require("dotenv").config();
+const apiKey = process.env.GOOGLE_MAPS_API;
 
 const MapWrapper = withScriptjs(
   withGoogleMap((props) => (
@@ -261,7 +263,7 @@ function ContactUs() {
       </div>
       <div className="big-map" id="contactUsMap">
         <MapWrapper
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC14bM9_V8HvrLl_COSxX1BLQ0cyRItVgk"
+          googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${apiKey}`}
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `100%` }} />}
           mapElement={<div style={{ height: `100%` }} />}

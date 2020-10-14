@@ -95,6 +95,7 @@ function RegisterPage() {
                   <Form className="register-form">
                     <Input placeholder="Email" type="text" />
                     <Input placeholder="Password" type="password" />
+                    {/* <Input placeholder="Confirm Password" type="password" /> */}
                     <Button block className="btn-round" color="primary">
                       Sign In
                     </Button>
