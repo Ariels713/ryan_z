@@ -21,7 +21,7 @@ function SectionHeader() {
               <div className="ipad-container">
                 <img
                   alt="..."
-                  src={require("../../assets/siteImages/headShot.jpg")}
+                  src="https://dl.airtable.com/.attachments/43512d1387cffb420298ea80761a81fa/f224ec28/headShot.jpg"
                 />
               </div>
             </Col>

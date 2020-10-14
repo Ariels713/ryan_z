@@ -33,10 +33,7 @@ function RegisterPage() {
         <div
           className="page-header"
           style={{
-            backgroundImage:
-              "url(" +
-              require("../../assets/siteImages/log_on_image.jpg") +
-              ")",
+            backgroundImage: `url(${"https://dl.airtable.com/.attachments/0feee9a802a6522dd1f5e03bf57b875a/726fbba0/log_on_image.jpg"})`,
           }}
         >
           <div className="filter" />

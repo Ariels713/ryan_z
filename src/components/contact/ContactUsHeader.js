@@ -17,10 +17,7 @@ function ProfilePageHeader() {
       <div
         className="page-header page-header-small"
         style={{
-          backgroundImage:
-            "url(" +
-            require("../../assets/siteImages/contact_page_image.jpg") +
-            ")",
+          backgroundImage: `url(${"https://dl.airtable.com/.attachments/a6713ec0941889889ad726f0deb65b84/94d263d6/contact_page_image.jpg"})`,
         }}
       >
         {/* <div className="filter" /> */}

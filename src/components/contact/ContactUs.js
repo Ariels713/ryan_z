@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // react plugin used to create google maps
 import {
   withScriptjs,
@@ -204,6 +204,18 @@ const MapWrapper = withScriptjs(
 );
 
 function ContactUs() {
+  const [name, setName] = useState("");
+  console.log(name);
+  const submitHandler = async (event) => {
+    console.log("testing");
+    event.preventDefault();
+    resetForm();
+    // console.log(name, email);
+  };
+
+  const resetForm = () => {
+    setName("");
+  };
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("contact-page");
@@ -222,11 +234,16 @@ function ContactUs() {
             <Row>
               <Col className="ml-auto mr-auto" md="8">
                 <h2 className="text-center">Get In Touch</h2>
-                <Form className="contact-form">
+                <Form className="contact-form" onSubmit={submitHandler}>
                   <Row>
                     <Col md="6">
                       <label>Name</label>
-                      <Input placeholder="Name" />
+                      <Input
+                        placeholder="Name"
+                        name="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
                     </Col>
                     <Col md="6">
                       <label>Email</label>

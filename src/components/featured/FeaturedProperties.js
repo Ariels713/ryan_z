@@ -41,7 +41,7 @@ function SectionCards() {
                     <img
                       alt="..."
                       className="img"
-                      src={require("../../assets/siteImages/house1.jpg")}
+                      src="https://dl.airtable.com/.attachmentThumbnails/636418d0975f07bd62b3440d1f93e2e3/e7cef6da"
                     />
                   </a>
                 </div>
@@ -76,7 +76,7 @@ function SectionCards() {
                     <img
                       alt="..."
                       className="img"
-                      src={require("../../assets/siteImages/house1.jpg")}
+                      src="https://dl.airtable.com/.attachmentThumbnails/636418d0975f07bd62b3440d1f93e2e3/e7cef6da"
                     />
                   </a>
                 </div>
@@ -111,7 +111,7 @@ function SectionCards() {
                     <img
                       alt="..."
                       className="img"
-                      src={require("../../assets/siteImages/house1.jpg")}
+                      src="https://dl.airtable.com/.attachmentThumbnails/636418d0975f07bd62b3440d1f93e2e3/e7cef6da"
                     />
                   </a>
                 </div>
