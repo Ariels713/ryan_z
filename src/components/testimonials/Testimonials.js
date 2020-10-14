@@ -17,6 +17,7 @@ import {
 // core components
 const items = [
   {
+    id: 1,
     content: (
       <CardBody>
         <h5 className="card-description">
@@ -41,6 +42,7 @@ const items = [
     caption: "",
   },
   {
+    id: 2,
     content: (
       <CardBody>
         <h5 className="card-description">
@@ -65,6 +67,7 @@ const items = [
     caption: "",
   },
   {
+    id: 3,
     content: (
       <CardBody>
         <h5 className="card-description">
@@ -162,7 +165,7 @@ function SectionTestimonials() {
                         <CarouselItem
                           onExiting={onExiting}
                           onExited={onExited}
-                          key={item.src}
+                          key={item.id}
                         >
                           <Card className="card-testimonial card-plain">
                             {item.content}

@@ -11,7 +11,7 @@ import { Button, Form, Input, Container, Row, Col } from "reactstrap";
 import ContactUsHeader from "./ContactUsHeader";
 // Google Maps API Key
 require("dotenv").config();
-const apiKey = process.env.GOOGLE_MAPS_API;
+const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API;
 
 const MapWrapper = withScriptjs(
   withGoogleMap((props) => (
