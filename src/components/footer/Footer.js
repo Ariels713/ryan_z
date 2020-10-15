@@ -35,7 +35,12 @@ function FooterBlack() {
                       <Button
                         className="btn-just-icon"
                         color="danger"
-                        href="https://www.instagram.com/ryan_zarb/"
+                        onClick={() =>
+                          window.open(
+                            "https://www.instagram.com/ryan_zarb/",
+                            "_blank"
+                          )
+                        }
                       >
                         <i className="fa fa-instagram"></i>
                       </Button>
@@ -47,7 +52,12 @@ function FooterBlack() {
                       <Button
                         className="btn-just-icon"
                         color="danger"
-                        href="https://www.facebook.com/RyanZRealty/?modal=admin_todo_tour"
+                        onClick={() =>
+                          window.open(
+                            "https://www.facebook.com/RyanZRealty/?modal=admin_todo_tour",
+                            "_blank"
+                          )
+                        }
                       >
                         <i className="fa fa-facebook"></i>
                       </Button>
