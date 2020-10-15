@@ -205,17 +205,34 @@ const MapWrapper = withScriptjs(
 
 function ContactUs() {
   const [name, setName] = useState("");
-  console.log(name);
-  const submitHandler = async (event) => {
-    console.log("testing");
-    event.preventDefault();
-    resetForm();
-    // console.log(name, email);
-  };
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  // const [sentMessage, setSentMessage] = useState(false);
 
   const resetForm = () => {
     setName("");
+    setEmail("");
+    setMessage("");
   };
+
+  const submitHandler = async (event) => {
+    event.preventDefault();
+    try {
+      await fetch("/.netlify/functions/contactUsData", {
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+      resetForm();
+      // setSentMessage(true);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("contact-page");
@@ -247,7 +264,12 @@ function ContactUs() {
                     </Col>
                     <Col md="6">
                       <label>Email</label>
-                      <Input placeholder="Email" />
+                      <Input
+                        placeholder="Email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
                     </Col>
                   </Row>
                   <label>Message</label>
@@ -255,6 +277,9 @@ function ContactUs() {
                     placeholder="Tell us your thoughts and feelings..."
                     type="textarea"
                     rows="4"
+                    name="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                   <Row>
                     <Col className="offset-md-4" md="4">
