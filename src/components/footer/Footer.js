@@ -32,14 +32,23 @@ function FooterBlack() {
                   </li>
                   <li>
                     <h3 style={{ margin: "0", marginLeft: "10px" }}>
-                      <Button className="btn-just-icon" color="danger">
+                      <Button
+                        className="btn-just-icon"
+                        color="danger"
+                        href="https://www.instagram.com/ryan_zarb/"
+                      >
                         <i className="fa fa-instagram"></i>
                       </Button>
                     </h3>
                   </li>
+
                   <li>
                     <h3 style={{ margin: "0", marginLeft: "10px" }}>
-                      <Button className="btn-just-icon" color="danger">
+                      <Button
+                        className="btn-just-icon"
+                        color="danger"
+                        href="https://www.facebook.com/RyanZRealty/?modal=admin_todo_tour"
+                      >
                         <i className="fa fa-facebook"></i>
                       </Button>
                     </h3>

@@ -17,6 +17,6 @@ exports.handler = async (event) => {
   ]);
   return {
     statusCode: 200,
-    body: JSON.stringify({ msg: "User Added" }),
+    body: JSON.stringify({ msg: "User Added to subscription" }),
   };
 };

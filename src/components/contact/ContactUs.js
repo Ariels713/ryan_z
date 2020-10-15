@@ -207,7 +207,7 @@ function ContactUs() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [sentMessage, setSentMessage] = useState(false);
+  const [sentMessage, setSentMessage] = useState(false);
 
   const resetForm = () => {
     setName("");
@@ -227,7 +227,7 @@ function ContactUs() {
         }),
       });
       resetForm();
-      // setSentMessage(true);
+      setSentMessage(true);
     } catch (err) {
       console.error(err);
     }
@@ -250,45 +250,51 @@ function ContactUs() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="text-center">Get In Touch</h2>
-                <Form className="contact-form" onSubmit={submitHandler}>
-                  <Row>
-                    <Col md="6">
-                      <label>Name</label>
+                {sentMessage ? (
+                  <h2 className="text-center">I'll be in touch soon!</h2>
+                ) : (
+                  <>
+                    <h2 className="text-center">Get In Touch</h2>
+                    <Form className="contact-form" onSubmit={submitHandler}>
+                      <Row>
+                        <Col md="6">
+                          <label>Name</label>
+                          <Input
+                            placeholder="Name"
+                            name="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                          />
+                        </Col>
+                        <Col md="6">
+                          <label>Email</label>
+                          <Input
+                            placeholder="Email"
+                            name="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                          />
+                        </Col>
+                      </Row>
+                      <label>Message</label>
                       <Input
-                        placeholder="Name"
-                        name="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Tell us your thoughts and feelings..."
+                        type="textarea"
+                        rows="4"
+                        name="message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                       />
-                    </Col>
-                    <Col md="6">
-                      <label>Email</label>
-                      <Input
-                        placeholder="Email"
-                        name="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </Col>
-                  </Row>
-                  <label>Message</label>
-                  <Input
-                    placeholder="Tell us your thoughts and feelings..."
-                    type="textarea"
-                    rows="4"
-                    name="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                  />
-                  <Row>
-                    <Col className="offset-md-4" md="4">
-                      <Button className="btn-fill" color="danger" size="lg">
-                        Send Message
-                      </Button>
-                    </Col>
-                  </Row>
-                </Form>
+                      <Row>
+                        <Col className="offset-md-4" md="4">
+                          <Button className="btn-fill" color="danger" size="lg">
+                            Send Message
+                          </Button>
+                        </Col>
+                      </Row>
+                    </Form>
+                  </>
+                )}
                 <Col className="text-center">
                   <h3 className="visit text-center">
                     <small>Coldwell Banker Realty</small>
